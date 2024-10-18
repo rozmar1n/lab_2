@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include "dev_exp_linear.h"
 
 double dev_exp(double *radioactivity, double *time, int M, double decay_time)
 {   

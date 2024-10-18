@@ -6,7 +6,7 @@
 
 #define amplitude 0.05
 
-void RangedRandDemo(int range_min, int range_max, int n);
+int RangedRandDemo(int range_min, int range_max);
 void add_noise (double *radioactivity, int N);
 
 #endif //noise_h

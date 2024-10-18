@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-#include <main.h>
-#include <nonlinear_equation.h>
+#include "main.h"
+#include "nonlinear_equation.h"
 
 double nonlinear_equation(double *radioactivity, double *time, int N)
 {
@@ -13,11 +13,11 @@ double nonlinear_equation(double *radioactivity, double *time, int N)
     for(i; i < N; i++)
     {
         decay_time = (interval2 - interval1)/2;
-        if ((model(&radioactivity, &time, N, decay_time) * model(&radioactivity, &time, N, interval1)) < 0)
+        if ((model(radioactivity, time, N, decay_time) * model(radioactivity, time, N, interval1)) < 0)
         {
             interval2 = decay_time;
         }
-        else if ((model(&radioactivity, &time, N, decay_time) * model(&radioactivity, &time, N, interval2)) < 0)
+        else if ((model(radioactivity, time, N, decay_time) * model(radioactivity, time, N, interval2)) < 0)
         {
             interval1 = decay_time;
         }

@@ -10,5 +10,6 @@
 #include "noise.h"
 
 #define precision 0.0001
+#define SIZE 100
 
 #endif
