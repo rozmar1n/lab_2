@@ -1,4 +1,4 @@
-#include "precision_analysis"
+#include "precision_analysis.h"
 
 double precision_analysis (double *radioactivity, double *time, int N)
        {
