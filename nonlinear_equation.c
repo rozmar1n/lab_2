@@ -4,7 +4,7 @@
 #include <main.h>
 #include <nonlinear_equation.h>
 
-double nonlinear_equation(double *radioactivity, double *time, int N, double precision)
+double nonlinear_equation(double *radioactivity, double *time, int N)
 {
     double interval1 = 0, interval2 = 0, decay_time = 0, decay_time0 = -153.153153;
     int i = 0;
@@ -32,7 +32,7 @@ double nonlinear_equation(double *radioactivity, double *time, int N, double pre
         }
     }
 
-    if (IsEqual(decay_time0, -153.153153, precision))
+    if (IsEqual(decay_time0, -153.153153))
     {
         printf("\n<<<The root of nonlinear equation was not found!>>>\n");
         printf("%lg\n", decay_time0);
@@ -41,7 +41,7 @@ double nonlinear_equation(double *radioactivity, double *time, int N, double pre
     return decay_time0;
 }
 
-bool IsEqual(double elem1, double elem2, double precision)
+int IsEqual(double elem1, double elem2)
 {
     return (fabs(elem1 - elem2) <= precision);
 }
