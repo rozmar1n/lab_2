@@ -35,7 +35,7 @@ double nonlinear_equation(double *radioactivity, double *time, int N, double pre
     if (IsEqual(decay_time0, -153.153153, precision))
     {
         printf("\n<<<The root of nonlinear equation was not found!>>>\n");
-        pritnf("%lg\n", decay_time0);
+        printf("%lg\n", decay_time0);
     }
 
     return decay_time0;
