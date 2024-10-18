@@ -9,4 +9,6 @@
 #include "dev_exp_linear.h"
 #include "noise.h"
 
+#define precision 0.0001
+
 #endif
