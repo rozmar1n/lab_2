@@ -14,7 +14,7 @@ double dev_exp(double *radioactivity, double *time, int M, double decay_time)
     return deviation1;
 }
 
-double dev_linear(double *radioaktivity, double *time, int M, double decay_rate)
+double dev_linear(double *radioactivity, double *time, int M, double decay_rate)
 {
     double deviation2;
     double sum_residuals2 = 0;

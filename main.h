@@ -4,5 +4,9 @@
 #include <stdio.h>
 #include <math.h>
 #include "precision_analysis.h"
+#include "model.h"
+#include "func1.h"
+#include "dev_exp_linear.h"
+#include "noise.h"
 
 #endif
