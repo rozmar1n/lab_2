@@ -3,13 +3,17 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "precision_analysis.h"
-#include "model.h"
-#include "func1.h"
-#include "dev_exp_linear.h"
-#include "noise.h"
 
-#define precision 0.0001
+#include "dev_exp_linear.h"
+#include "func1.h"
+#include "linear_equation.h"
+#include "noise.h"
+#include "model.h"
+#include "nonlinear_equation.h"
+#include "precision_analysis.h"
+
+#define precision 0.001
+
 #define SIZE 100
 
 #endif

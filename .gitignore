@@ -7,3 +7,4 @@ noise.o
 nonlinear_equation.o
 precision_analysis.o
 lab_2
+NEmain.c

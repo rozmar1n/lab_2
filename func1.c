@@ -7,7 +7,7 @@
 #define SIZE 100
 
 int experiment (double* radioactivity, double* time, double start_time, double end_time, double step){
-    double const betta = 3;
+    double const betta = 3.5;
     int n = 0;
     double helper = start_time;
     for (int i = 0; helper <= end_time; i++){
