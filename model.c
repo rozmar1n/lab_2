@@ -6,7 +6,7 @@ double model( double* radioctivity, double* time, int N, double point)
     double summ = 0;
     for( int i = 0; i < N; i++)
     {
-        summ += time[i]*exp( time[i]/point )*( radioctivity[i] - exp( time[i]/point ) );
+        summ += time[i]*exp( -time[i]/point )*( radioctivity[i] - exp( -time[i]/point ) );
     }
     return summ;
 }
