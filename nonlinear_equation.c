@@ -6,13 +6,13 @@
 
 double nonlinear_equation(double *radioactivity, double *time, int N)
 {
-    double interval1 = 0, interval2 = 0, decay_time = 0, decay_time0 = -153.153153;
+    double interval1 = 0.2, interval2 = 8.2, decay_time = 0, decay_time0 = -153.153153;
     int i = 0;
-    scanf("%lg%lg", &interval1, &interval2);
+    //scanf("%lg%lg", &interval1, &interval2);
 
     for(i; i < N; i++)
     {
-        decay_time = (interval2 - interval1)/2;
+        decay_time = (interval2 + interval1)/2;
         if ((model(radioactivity, time, N, decay_time) * model(radioactivity, time, N, interval1)) < 0)
         {
             interval2 = decay_time;
@@ -22,11 +22,7 @@ double nonlinear_equation(double *radioactivity, double *time, int N)
             interval1 = decay_time;
         }
 
-        if (fabs(interval2 -interval1) > 2 * precision)
-        {
-            continue;
-        }
-        else
+        if (fabs(interval2 -interval1) <= 2 * precision)
         {
             decay_time0 = decay_time;
         }
@@ -34,8 +30,8 @@ double nonlinear_equation(double *radioactivity, double *time, int N)
 
     if (IsEqual(decay_time0, -153.153153))
     {
-        printf("\n<<<The root of nonlinear equation was not found!>>>\n");
-        printf("%lg\n", decay_time0);
+        // printf("\n<<<The root of nonlinear equation was not found!>>>\n");
+        // printf("%lg\n", decay_time0);
     }
 
     return decay_time0;

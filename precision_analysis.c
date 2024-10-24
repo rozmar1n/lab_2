@@ -9,8 +9,8 @@ double precision_analysis (double *radioactivity, double *time, int N)
 
                 if (2 * dev_exp (radioactivity, time, numberElements, decay_time) <=
                    dev_linear(radioactivity, time, numberElements, decay_rate))
-                   return (radioactivity, time, numberElements - 1, precision);
+                   return time[numberElements];
            }
 
-           return 1;
+           return 123321;
        }

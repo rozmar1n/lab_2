@@ -12,7 +12,7 @@
 #include "nonlinear_equation.h"
 #include "precision_analysis.h"
 
-#define precision 0.001
+#define precision 0.0001
 
 #define SIZE 100
 

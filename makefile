@@ -9,4 +9,4 @@ hello: main.o dev_exp_linear.o func1.o linear_equation.o model.o noise.o nonline
 	$(CC) -c $(CFLAFS) $< 
 
 clean:./
-	rm -rf *.o lab_2
+	rm -rf *.o
